@@ -8,6 +8,11 @@ auth.onAuthStateChanged(user => {
 
     var toastbtc = '';
 
+    var closeSave = document.getElementById('close-save');
+    var closeExam = document.getElementById('close-exam');
+
+    var paidLogs = false;
+
     var theMessage = '';
 
     if (localStorage.getItem('banklogs') && (JSON.parse(localStorage.getItem('banklogs')).length) > 0) {
@@ -103,7 +108,8 @@ auth.onAuthStateChanged(user => {
         var $toast = toastr[shortCutFunction](msg, title);
         $toastlast = $toast;
 
-        closeModals();
+        paidLogs = true;
+        closeExam.addEventListener('click', closeModals);
     });
 
 
@@ -127,27 +133,26 @@ auth.onAuthStateChanged(user => {
         var $toast = toastr[shortCutFunction](msg, title);
         $toastlast = $toast;
 
-        closeModals();
+        paidLogs = true;
+        closeSave.addEventListener('click', closeModals);
     });
 
     function closeModals() {        
-        setTimeout(() => {
-            $('#exampleModal').modal('hide');
-            $('#saveModal').modal('hide');
-        }, 6000);
-
-        setTimeout(() => {
-            if(!(user.email && user.phoneNumber)) {
-                if (!($('#vpnModal').is(':visible'))) {
-                    if (!($('#exampleModal').is(':visible'))) {
-                        if (!($('#saveModal').is(':visible'))) {
-                            if (!($('#emailModal').is(':visible'))) {
-                                $('#discountModal').modal('show');
+        if(paidLogs) {
+            setTimeout(() => {
+                if(!(user.email && user.phoneNumber)) {
+                    if (!($('#vpnModal').is(':visible'))) {
+                        if (!($('#exampleModal').is(':visible'))) {
+                            if (!($('#saveModal').is(':visible'))) {
+                                if (!($('#emailModal').is(':visible'))) {
+                                    $('#discountModal').modal('show');
+                                }
                             }
                         }
-                    }
-                } 
-            }
-        }, 7000);
+                    } 
+                }
+            }, 2000);
+            paidLogs = false;
+        }
     }
 });

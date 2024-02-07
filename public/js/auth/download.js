@@ -160,7 +160,7 @@ auth.onAuthStateChanged(user => {
 
 	if(user.email) {
 		emailP.innerHTML = `
-			Email Invoice To: <br>
+			Logs will be sent to: <br>
 			<span id="uida">${user.email}</span>.`;
 	} else if(user.phoneNumber) {
 		emailP.innerHTML = `
@@ -168,8 +168,8 @@ auth.onAuthStateChanged(user => {
 			<span id="uida" style="letter-spacing: 1.5px !important">${user.phoneNumber}</span>.`;
 	} else if(user.isAnonymous) {
 		emailP.innerHTML = `
-			<span id="uidy">${theBrowser}</span>, <br>
-			<span id="uida">${theDevice}</span>.`;
+			<span id="uida">${theBrowser}</span>, <br>
+			<span id="uidy">${theDevice}</span>.`;
 	}
 });
 

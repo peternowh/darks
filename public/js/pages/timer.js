@@ -45,7 +45,7 @@ auth.onAuthStateChanged(user => {
                 localStorage.setItem('seconds-left', p1knoDecimalo);
                 localStorage.setItem('timez-set', true);
             }
-            let width = 720;
+            let width = 900;
 
             function frame(){
 
@@ -55,7 +55,7 @@ auth.onAuthStateChanged(user => {
                 var p1knoDecimal = Math.trunc(p1k);
                 var theTime = localStorage.getItem('seconds-left');
                 var timeDifference = parseFloat(p1knoDecimal) - parseFloat(theTime);
-                width = 720 - timeDifference;
+                width = 900 - timeDifference;
 
 
                 if(width < 30){
@@ -69,7 +69,7 @@ auth.onAuthStateChanged(user => {
                 else if( width == 60) {
                     elemj.classList.add("bg-danger");
                     var minutes = Math.floor(width/60); var seconds = width - minutes * 60; if(seconds < 10){ seconds = '0'+seconds } 
-                    elemj.style.width = (width/7.2) + "%"; document.getElementById('escoz').innerHTML = `Time left: ${minutes}:${seconds}`;
+                    elemj.style.width = (width/9) + "%"; document.getElementById('escoz').innerHTML = `Time left: ${minutes}:${seconds}`;
                     var shortCutFunction = 'success';
                     var msg = `
                         1 Minute Left! <br> ${theirName}, <hr class="to-hr hr15-bot"> 
@@ -80,18 +80,18 @@ auth.onAuthStateChanged(user => {
 
 
 
-                else if(width <= 239) {
+                else if(width <= 299) {
                     elemj.classList.add("bg-danger");
                     var minutes = Math.floor(width/60); var seconds = width - minutes * 60; if(seconds < 10){ seconds = '0'+seconds } 
-                    elemj.style.width = (width/7.2) + "%"; document.getElementById('escoz').innerHTML = `Time left: ${minutes}:${seconds}`;
+                    elemj.style.width = (width/9) + "%"; document.getElementById('escoz').innerHTML = `Time left: ${minutes}:${seconds}`;
                 }
-                else if( width == 240) {
+                else if( width == 300) {
                     elemj.classList.add("bg-danger");
                     var minutes = Math.floor(width/60); var seconds = width - minutes * 60; if(seconds < 10){ seconds = '0'+seconds } 
-                    elemj.style.width = (width/7.2) + "%"; document.getElementById('escoz').innerHTML = `Time left: ${minutes}:${seconds}`;
+                    elemj.style.width = (width/9) + "%"; document.getElementById('escoz').innerHTML = `Time left: ${minutes}:${seconds}`;
                     var shortCutFunction = 'success';
                     var msg = `
-                        4 Minutes Left! <br> ${theirName},    <hr class="to-hr hr15-bot"> 
+                        5 Minutes Left! <br> ${theirName},    <hr class="to-hr hr15-bot"> 
                         Send: $${coastNumber} BTC.     <hr class="hr10-nil"> 
                     `; 
                     toastr.options = {closeButton: true, debug: false, newestOnTop: true, progressBar: true, positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null};var $toast = toastr[shortCutFunction](msg);$toastlast = $toast;
@@ -101,18 +101,18 @@ auth.onAuthStateChanged(user => {
 
 
 
-                else if(width <= 479) {
+                else if(width <= 599) {
                     elemj.classList.add("bg-warning");
                     var minutes = Math.floor(width/60); var seconds = width - minutes * 60; if(seconds < 10){ seconds = '0'+seconds } 
-                    elemj.style.width = (width/7.2) + "%"; document.getElementById('escoz').innerHTML = `Time left: ${minutes}:${seconds}`;
+                    elemj.style.width = (width/9) + "%"; document.getElementById('escoz').innerHTML = `Time left: ${minutes}:${seconds}`;
                 }
-                else if(width == 480) {
+                else if(width == 600) {
                     elemj.classList.add("bg-warning");
                     var minutes = Math.floor(width/60); var seconds = width - minutes * 60; if(seconds < 10){ seconds = '0'+seconds } 
-                    elemj.style.width = (width/7.2) + "%"; document.getElementById('escoz').innerHTML = `Time left: ${minutes}:${seconds}`;
+                    elemj.style.width = (width/9) + "%"; document.getElementById('escoz').innerHTML = `Time left: ${minutes}:${seconds}`;
                     var shortCutFunction = 'success';
                     var msg = `
-                        8 Minutes Left! <br> ${theirName},    <hr class="to-hr hr15-bot"> 
+                        10 Minutes Left! <br> ${theirName},    <hr class="to-hr hr15-bot"> 
                         Send: $${coastNumber} BTC.     <hr class="hr10-nil"> 
                     `; 
                     toastr.options = {closeButton: true, debug: false, newestOnTop: true, progressBar: true, positionClass: 'toast-top-full-width', preventDuplicates: true, onclick: null};var $toast = toastr[shortCutFunction](msg);$toastlast = $toast;
@@ -124,7 +124,7 @@ auth.onAuthStateChanged(user => {
                     var minutes = Math.floor(width/60);
                     var seconds = width - minutes * 60;
                     if(seconds < 10){ seconds = '0'+seconds }
-                    elemj.style.width = (width/7.2) + "%";
+                    elemj.style.width = (width/9) + "%";
                     document.getElementById('escoz').innerHTML = `Time left: ${minutes}:${seconds}`;
                 }
             }

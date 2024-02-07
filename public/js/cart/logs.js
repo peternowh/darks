@@ -250,7 +250,7 @@ if (document.getElementById('boa01')) {
     (document.getElementById("truist010").innerHTML = "Buy: $" + parseFloat((document.getElementById("truist10").innerHTML.replace("$", "").replace(",", "") / 57).toFixed(0)).toLocaleString()),
     (document.getElementById("truist011").innerHTML = "Buy: $" + parseFloat((document.getElementById("truist11").innerHTML.replace("$", "").replace(",", "") / 57).toFixed(0)).toLocaleString())
 } else if (document.getElementById('wells01')) {
-    (document.getElementById("wells1").innerHTML = "$" + (4650).toLocaleString()),
+    (document.getElementById("wells1").innerHTML = "$" + (4659).toLocaleString()),
     (document.getElementById("wells2").innerHTML = "$" + (5219).toLocaleString()),
     (document.getElementById("wells3").innerHTML = "$" + (6027).toLocaleString()),
     (document.getElementById("wells4").innerHTML = "$" + (6970).toLocaleString()),
