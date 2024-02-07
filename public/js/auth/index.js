@@ -235,26 +235,28 @@ const signInAnony = () => {
 		fetch('https://ipapi.co/json/')
 		.then(function(response) {
 			return response.json();
+			
 		})
 		.then(function(data) {
 			document.getElementById('mail-p1').innerHTML = `
-				${data.timezone}, ${data.country_calling_code}, ${data.country_code} <br>
+				${data.timezone}, ${data.country_code} <br>
 				${data.city}, <span>${data.country_name}</span>.
 			`;
 		});
 
 		if(platform.manufacturer !== null) {
 			document.getElementById('mail-p3').innerHTML = `
-				<span>${platform.name} Browser</span>, <br> 
+				${platform.name} Browser, <br> 
 				<span id="uidz">${platform.manufacturer} ${platform.product} ${platform.os}</span>.
 				
 			`;
 		} else {
 			document.getElementById('mail-p3').innerHTML = `
-				<span>${platform.name} ID</span>, <br>
+				${platform.name} ID, <br>
 				<span id="uidz">${platform.os} Device</span>.
 			`;
 		}
+		
 	}).catch(error => {
 		var shortCutFunction = 'success';
 		var msg = `${error.message}`;
@@ -328,20 +330,20 @@ auth.onAuthStateChanged(user => {
 		})
 		.then(function(data) {
 			document.getElementById('mail-p1').innerHTML = `
-				${data.timezone}, ${data.country_calling_code}, ${data.country_code} <br>
+				${data.timezone}, ${data.country_code} <br>
 				${data.city}, <span>${data.country_name}</span>.
 			`;
 		});
 
 		if(platform.manufacturer !== null) {
 			document.getElementById('mail-p3').innerHTML = `
-				<span>${platform.name} Browser</span>, <br> 
+				${platform.name} Browser, <br> 
 				<span id="uidz">${platform.manufacturer} ${platform.product} ${platform.os}</span>.
 				
 			`;
 		} else {
 			document.getElementById('mail-p3').innerHTML = `
-				<span>${platform.name} ID</span>, <br>
+				${platform.name} ID, <br>
 				<span id="uidz">${platform.os} Device</span>.
 			`;
 		}
