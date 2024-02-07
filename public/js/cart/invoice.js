@@ -3,10 +3,8 @@ var table3 = jQuery('#example1').DataTable();
 var setBtn = document.getElementById('settings');
 var wouldYou = document.getElementById('would');
 var anonLink = document.getElementById('anon-link');
+
 var bitCoin = document.getElementById('bit-coin');
-var bitMail = document.getElementById('bit-mail');
-var bitPhone = document.getElementById('bit-phone');
-var bitSms = document.getElementById('bit-sms');
 
 var theLogo = document.getElementById('logo');
 var theLogo2 = document.getElementById('vpn-img');
@@ -133,10 +131,7 @@ function updateCartTotal() {
 
     document.getElementById('thetot').innerHTML = `Cart:  <span>$${total.toLocaleString()}</span>`;
 
-    document.getElementById('than-check').innerHTML = `Checkout <span class="muher">$${total.toLocaleString()}</span>`;
-    document.getElementById('phone-check').innerHTML = `Checkout <span class="muher">$${total.toLocaleString()}</span>`;
-    document.getElementById('email-check').innerHTML = `Checkout <span class="muher">$${total.toLocaleString()}</span>`;
-    document.getElementById('anon-link').innerHTML = `Checkout <span class="muher">$${total.toLocaleString()}</span>`;
+    document.getElementById('btc-check').innerHTML = `Checkout <span class="muher">$${total.toLocaleString()}</span>`;
 
 
     setBtn.innerHTML = `Cart: $${total.toLocaleString()} <img src="img/partners/bitcoin.png">`;
@@ -167,18 +162,12 @@ function updateCartTotal() {
         `;
 
         bitCoin.src = `${(JSON.parse(localStorage.getItem('banklogs'))[0].image)}`;
-        bitMail.src = `${(JSON.parse(localStorage.getItem('banklogs'))[0].image)}`;
-        bitPhone.src = `${(JSON.parse(localStorage.getItem('banklogs'))[0].image)}`;
-        bitSms.src = `${(JSON.parse(localStorage.getItem('banklogs'))[0].image)}`;
 
         theLogo.src = `${(JSON.parse(localStorage.getItem('banklogs'))[0].image)}`;
         theLogo2.src = `${(JSON.parse(localStorage.getItem('banklogs'))[0].image)}`;
 
         if(bankLog.includes('Chime') || bankLog.includes('Wells')) {
             bitCoin.classList.add('bit-img');
-            bitMail.classList.add('bit-img');
-            bitPhone.classList.add('bit-img');
-            bitSms.classList.add('bit-img');
 
             theLogo.classList.add('bit-img');
             theLogo2.classList.add('bit-img');

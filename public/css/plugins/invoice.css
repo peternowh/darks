@@ -57,34 +57,27 @@
 .butn.link-btn {
     padding: 7.8px 16.5px;
 }
-.butn#than-verify {
-    padding: 7.8px 13px;
-}
-.butn#email-verify {
-    padding: 7.8px 13px;
-}
-.butn.ver-btn#anon-link {
-    padding: 7.8px 17px;
-}
-.butn.home-btn#get-voice {
-    padding: 7.8px 17px;
-}
+
+
 .butn#code-email {
     padding: 7.5px 20px;
     letter-spacing: 1px !important;
     word-spacing: 5px !important;
 }
-.butn.home-btn#code-home {
+.butn#code-home {
     padding: 7.5px 15px;
     letter-spacing: 1px !important;
     word-spacing: 3px !important;
 }
   
-.butn#than-check,
-.butn#email-check,
-.butn#phone-check {
+.butn#btc-check {
     padding: 7.8px 13px !important;
 }
+
+.butn#check-now {
+    padding: 7.8px 15px !important;
+}
+
 .muher {
     margin-left: 3px !important;
     font-weight: 700 !important;
@@ -124,29 +117,21 @@
         font-size: 20.5px;
         padding: 7.5px 16.5px;
    }
-   .butn.ver-btn#anon-link {
-       padding: 7.5px 14px;
-    }
    .butn.home-btn.check {
         padding: 7.5px 13.5px;
     }
     .butn.link-btn {
         padding: 7.5px 16.5px;
     }
-    .butn.home-btn#get-voice {
-        padding: 7.5px 17px;
+
+    .butn#btc-check {
+        padding: 7.5px 13px !important;
     }
-    .butn#than-check,
-    .butn#email-check,
-    .butn#phone-check {
-        padding: 7.5px 10px !important;
+
+    .butn#check-now {
+        padding: 7.5px 13px !important;
     }
-    .butn#than-verify {
-        padding: 7.5px 12px;
-    }
-    .butn#email-verify {
-        padding: 7.5px 13px;
-    }
+
    .invoice img {
         width: 49px !important;
         height: 49px !important;
@@ -162,47 +147,26 @@
     width: 27px;
     border-radius: 4px;
 }
-#than-invoice,
-#email-invoice, 
-#phone-invoice, 
-#anon-invoice {
+#my-invoice {
     margin: 0.7px !important;
     padding: 0px !important;
     width: 100% !important;
 }
-#than-div,
-#anon-div, 
-#phones-div, 
-#emails-div {
-    display: none;
-}
-#anon-div,
-#than-div,
-#emails-div,
-#phones-div {
+#invoice-div {
     margin-top: 10.5vh;
 }
 @media screen and (min-width: 1370px) {
-    #anon-div,
-    #than-div,
-    #emails-div,
-    #phones-div {
+    #invoice-div {
         margin-top: 16vh;
     }
 }
 @media screen and (max-width: 821px) {
-    #anon-div,
-    #than-div,
-    #emails-div,
-    #phones-div {
+    #invoice-div {
         margin-top: 16vh;
     }
 }
 @media screen and (max-width: 500px) {
-    #anon-div,
-    #than-div,
-    #emails-div,
-    #phones-div {
+    #invoice-div {
         margin-top: 14vh;
     }
     #confirm-div {
@@ -210,90 +174,55 @@
     }
 }
 @media screen and (max-width: 381px) {
-    #anon-div,
-    #than-div,
-    #emails-div,
-    #phones-div {
+    #invoice-div {
         margin-top: 13vh;
     }
 }
 
-#anon-invoice p,
-#than-invoice p,
-#email-invoice p, 
-#phone-invoice p {
+#invoice-div p {
     margin: 14px auto !important;
     font-size: 21px !important;
     line-height: 52px !important;
 }
 
 @media screen and (min-width: 1370px) {
-    #anon-invoice p,
-    #than-invoice p,
-    #email-invoice p, 
-    #phone-invoice p {
+    #invoice-div p {
         margin: 5px auto 7px !important;
         font-size: 23px !important;
         line-height: 60px !important;
     }
 }
-#than-invoice p span,
-#email-invoice p span, 
-#phone-invoice p span, 
-#anon-invoice p span { 
+#invoice-div p span {
     font-weight: 600;
 }
 @media screen and (max-width: 574px) {
-    #anon-invoice p,
-    #than-invoice p,
-    #email-invoice p, 
-    #phone-invoice p {
+    #invoice-div p {
         margin: 7px auto 7px !important;
         font-size: 20px !important;
         line-height: 52px !important;
     }
 }
 @media screen and (max-width: 404px) {
-    #anon-invoice p,
-    #than-invoice p,
-    #email-invoice p, 
-    #phone-invoice p {
+    #invoice-div p {
         font-size: 19.5px !important;
         line-height: 50px !important;
     }
 }
 @media screen and (max-width: 380px) {
-    #anon-invoice p,
-    #than-invoice p,
-    #email-invoice p, 
-    #phone-invoice p {
+    #invoice-div p {
         font-size: 19.3px !important;
         line-height: 50px !important;
     }
 }
 @media screen and (max-width: 370px) {
-    #anon-invoice p,
-    #than-invoice p,
-    #email-invoice p, 
-    #phone-invoice p {
+    #invoice-div p {
         font-size: 17.5px !important;
         line-height: 49px !important;
     }
 }
-#thanEmail,
-#thanPhone,
-#yourEmail, 
-#yourPhone, 
-#anon-invoice span {
+#my-invoice span {
     font-weight: 600;
     color: #121d33 !important;
-}
-#yourEmail {
-    opacity: 0.95 !important;
-}
-#thanPhone,
-#yourPhone {
-    letter-spacing: 1.3px !important;
 }
 .invoice {
     display: flex;
@@ -370,44 +299,17 @@ blink.disc {
 
 
 
-.link-then-div {
+.link-first-div {
     margin-top: 14px !important;
     margin-bottom: 16px !important;
 }
-.link-than-div {
+.link-second-div {
     margin-top: 14px !important;
     margin-bottom: -16px !important;
 }
 
 
-.link-mail-div {
-    margin-top: 14px !important;
-    margin-bottom: 16px !important;
-}
-.link-code-div {
-    margin-top: 14px !important;
-    margin-bottom: -16px !important;
-}
 
-
-.link-mwema-div {
-    margin-top: 14px !important;
-    margin-bottom: 16px !important;
-}
-.link-ver-div {
-    margin-top: 14px !important;
-    margin-bottom: -16px !important;
-}
-
-
-.link-anon-div {
-    margin-top: 14px !important;
-    margin-bottom: 7px !important;
-}
-.link-email-div {
-    margin-top: 14px !important;
-    margin-bottom: -7px !important;
-}
 
 
 .nohr {

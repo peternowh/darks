@@ -66,11 +66,8 @@ a:active {
   color: #03a9f5;
   text-decoration: none;
 }
-#anon-invoice,
-.empty-cart, 
-#than-invoice,
-#email-invoice, 
-#phone-invoice {
+#my-invoice,
+.empty-cart {
   border: 5px solid rgba(3, 169, 245, 0.5) !important;
   background: rgba(3, 169, 245, 0.13) !important;
 }
@@ -516,14 +513,8 @@ span#uids{
 .google {
   background: rgb(129, 212, 250)
 }
-#email-invoice p, 
-#phone-invoice p, 
-#anon-invoice p,
-#than-invoice p,
-#than-invoice p span,
-#email-invoice p span, 
-#phone-invoice p span, 
-#anon-invoice p span { 
+#my-invoice p, 
+#my-invoice p span {
   color: rgb(15, 60, 94) !important;
 }
 

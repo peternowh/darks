@@ -24,16 +24,6 @@ const theId = document.getElementById('the-id');
 const theDate = document.getElementById('the-date');
 const labelDate = document.getElementById('label-date');
 
-const thanEmail = document.getElementById('thanEmail');
-const thanPhone = document.getElementById('thanPhone');
-
-const yourEmail = document.getElementById('yourEmail');
-const yourPhone = document.getElementById('yourPhone');
-
-const thanInvoice = document.getElementById('than-div');
-const emailInvoice = document.getElementById('emails-div');
-const phoneInvoice = document.getElementById('phones-div');
-const anonInvoice = document.getElementById('anon-div');
 
 const mailField = document.getElementById('inputLife');
 const signUp = document.getElementById('email-phone');
@@ -54,9 +44,6 @@ const madrid = document.getElementById('madrid');
 const heySave1 = document.getElementById('save-1');
 const heySave2 = document.getElementById('save-2');
 
-const thanVerify = document.getElementById('than-verify');
-const emailVerify = document.getElementById('email-verify');
-
 const closeModal = document.getElementsByClassName('btn-see')[0];
 const verClose = document.getElementById('ver-close');
 
@@ -64,6 +51,13 @@ const email2 = document.getElementById('email-2');
 
 const verifyH4 = document.getElementById('verify-h4');
 const verCheck = document.getElementById('ver-check');
+
+
+const wouldPa = document.getElementById('would');
+const wildPa = document.getElementById('wild');
+
+const checkNow = document.getElementById('check-now');
+const checkImg = document.getElementById('check-img');
 
 const auth = firebase.auth();
 
@@ -89,24 +83,41 @@ auth.onAuthStateChanged(user => {
 		var theaddress = themail.substring(0, themail.indexOf('@'));
 		if (user.displayName) { theaddress = user.displayName } 
 		if (user.phoneNumber) {
-			thanInvoice.style.display = 'flex';
 			var thePhoneNo = user.phoneNumber;
 			jinaHolder.value = thePhoneNo;
 			jinaHolder3.value = thePhoneNo;
 			jinaHolder.value = thePhoneNo;
 			jinaHolder3.value = thePhoneNo;
-			thanEmail.innerText = themail;
-			thanVerify.innerHTML = thePhoneNo;
-			thanPhone.innerText = thePhoneNo;
 			jinaHolder2.innerHTML = themail;
+
+			wouldPa.innerHTML = `
+				Bank logs will be sent via <br>
+				email and SMS to:
+			`;
+			wildPa.innerHTML = `
+				<span id="thanEmail">${themail}</span>, <br>
+				<span id="thanPhone">${thePhoneNo}</span>.
+			`;
+			checkNow.innerHTML = 'View Account';
+			checkNow.setAttribute('data-bs-target', '#vpnModal');
+			checkImg.src = 'img/partners/anonymous.png';
 
 			voiceDiv.setAttribute('data-bs-target', '#vpnModal');
 		} else {
-			emailInvoice.style.display = 'flex';
 			jinaHolder.value = theaddress;
 			jinaHolder3.value = theaddress;
-			yourEmail.innerText = themail;
 			jinaHolder2.innerHTML = 'Get Phone Invoice';
+
+			wouldPa.innerHTML = `
+				Bank logs will be sent to <br>
+				<span id="yourEmail">${themail}</span> 
+			`;
+			wildPa.innerHTML = `
+				Logs can be sent to <span>SMS</span> <br>
+				get <span>phone</span> invoice. 
+			`;
+			checkNow.innerHTML = 'Phone Invoice';
+			checkImg.src = 'img/partners/phone.png';
 		
 			phoneShow();
 		}
@@ -123,7 +134,6 @@ auth.onAuthStateChanged(user => {
 		showLink.setAttribute('data-bs-target', '#emailModal');
 		showLink.classList.add('yellow');		
 	} else	if (user.phoneNumber) {
-		phoneInvoice.style.display = 'flex';
 		var thePhoneNo = user.phoneNumber;
 		jinaHolder.value = thePhoneNo;
 		jinaHolder3.value = thePhoneNo;
@@ -132,12 +142,25 @@ auth.onAuthStateChanged(user => {
 		voiceDiv.classList.remove('gold');
 		voiceImg.setAttribute('src', 'img/partners/phone.png');
 
+		wouldPa.innerHTML = `
+			Bank logs will be sent to <br>
+			<span id="yourEmail">${thePhoneNo}</span> `;
+		wildPa.innerHTML = `
+			Logs can be sent to <span>mail</span> <br>
+			get <span>email</span> invoice. `;
+		checkNow.innerHTML = 'Email Invoice';
+		checkImg.src = 'img/partners/comm.png';
+
 		showLink.classList.add('yellow');
 		emailShow();
-		yourPhone.innerText = thePhoneNo;
 		jinaHolder2.innerHTML = 'Get Email Invoice';
 	} else if(user.isAnonymous) {
-		anonInvoice.style.display = 'flex';
+		wildPa.innerHTML = `
+			Bank logs can be sent via <br>
+			<span>email</span> or <span>sms</span>.
+		`;
+		checkNow.innerHTML = 'Email / Phone';
+		checkImg.src = 'img/partners/check.png';
 	}
 
 	showLink.addEventListener('click', () => {
@@ -252,10 +275,6 @@ function emailShow() {
 	mailField.setAttribute('placeholder', 'Enter your Email...');
 	signUp.innerHTML = `Verify Email <img src="img/partners/gmails.png" class="gmails">`;
 }
-
-
-document.getElementById('code-verify').addEventListener('click', emailShow);
-document.getElementById('email-verify').addEventListener('click', phoneShow);
 
 
 window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {

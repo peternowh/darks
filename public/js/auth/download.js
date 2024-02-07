@@ -68,6 +68,8 @@ const phoneNumberField2 = document.getElementById('nameLife');
 const codeField2 = document.getElementById('code');
 const signInWithPhoneButton2 = document.getElementById('signInWithPhone');
 
+const nameForms = document.getElementById('name-form');
+
 const heyName1 = document.getElementById('name-1');
 
 
@@ -99,7 +101,7 @@ auth.onAuthStateChanged(user => {
 			voiceDiv.setAttribute('data-bs-target', '#vpnModal');
 
 			jinaHolder2.innerHTML = themail;
-
+			nameForms.style.display = 'none';
 			heyName1.innerHTML = `${themail} <br> <span>${thePhoneNo}</span>`;
 		} else {
 			jinaHolder2.innerHTML = 'Get Phone Invoice';
@@ -749,7 +751,7 @@ const signUpFunction2 = () => {
 	}
 }
 signUp2.addEventListener('click', signUpFunction2);
-document.getElementById('name-form').addEventListener('submit', signUpFunction2);
+nameForms.addEventListener('submit', signUpFunction2);
 
 
 

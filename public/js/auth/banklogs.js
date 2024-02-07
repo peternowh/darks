@@ -73,8 +73,6 @@ auth.onAuthStateChanged(user => {
 			var thePhoneNo = user.phoneNumber;
 			jinaHolder.value = thePhoneNo;
 			jinaHolder3.value = thePhoneNo;
-			heyName1.innerHTML = `Bank logs will be sent to <br> <span>${themail}</span>`;
-			heyName3.innerHTML = `Logs will also be sent to: <br> <span>${thePhoneNo}</span>`;
 			jinaHolder2.innerHTML = themail;
 
 			voiceDiv.setAttribute('data-bs-target', '#vpnModal');
