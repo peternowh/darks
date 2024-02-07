@@ -49,8 +49,6 @@ const heySave1 = document.getElementById('save-1');
 const heySave2 = document.getElementById('save-2');
 
 
-const showThis = document.getElementById('show-this');
-
 
 const email2 = document.getElementById('email-2');
 
@@ -98,7 +96,6 @@ auth.onAuthStateChanged(user => {
 			var thePhoneNo = user.phoneNumber;
 			jinaHolder.value = thePhoneNo;
 			jinaHolder3.value = thePhoneNo;
-			voiceDiv.setAttribute('data-bs-target', '#vpnModal');
 
 			jinaHolder2.innerHTML = themail;
 			nameForms.style.display = 'none';
@@ -115,6 +112,7 @@ auth.onAuthStateChanged(user => {
 		verifyH4.innerHTML = theaddress;
 		verCheck.addEventListener('click', sendEmail);
 		
+		voiceDiv.setAttribute('data-bs-target', '#emailModal');
 		voiceDiv.innerHTML = theaddress;
 		voiceDiv.classList.add('lesnar');
 		voiceDiv.classList.remove('gold');
@@ -123,8 +121,6 @@ auth.onAuthStateChanged(user => {
 		showLink.setAttribute('data-bs-target', '#emailModal');
 
 		showLink.classList.add('yellow');		
-
-		showThis.style.display = 'none';
 	} else 	if (user.phoneNumber) {
 		var thePhoneNo = user.phoneNumber;
 
@@ -141,8 +137,6 @@ auth.onAuthStateChanged(user => {
 		jinaHolder2.innerHTML = 'Get Email Invoice';
 		emailShow();
 		emailShow2();
-
-		showThis.style.display = 'none';
 	} 
 
 

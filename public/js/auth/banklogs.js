@@ -75,7 +75,6 @@ auth.onAuthStateChanged(user => {
 			jinaHolder3.value = thePhoneNo;
 			jinaHolder2.innerHTML = themail;
 
-			voiceDiv.setAttribute('data-bs-target', '#vpnModal');
 			if (localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)) {
 				goodies = JSON.parse(localStorage.getItem('banklogs'));
 				for (var i = 0; i < goodies.length; i++) {
@@ -104,6 +103,7 @@ auth.onAuthStateChanged(user => {
 		verifyH4.innerHTML = theaddress;
 		verCheck.addEventListener('click', sendEmail);
 
+		voiceDiv.setAttribute('data-bs-target', '#emailModal');
 		voiceDiv.innerHTML = theaddress;
 		voiceDiv.classList.add('lesnar');
 		voiceDiv.classList.remove('gold');

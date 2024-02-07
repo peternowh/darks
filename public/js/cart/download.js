@@ -217,15 +217,11 @@ function updateCartTotal() {
         const banking2 = (JSON.parse(localStorage.getItem('banklogs'))[0].info2);
         const banking3 = (JSON.parse(localStorage.getItem('banklogs'))[0].info3);
 
-        const theBanklog = document.getElementsByClassName('the-banklog')[0];
-
         
         if(bankLog.includes('America')) {
             downFile.innerHTML = 'Bank of America';
-            theBanklog.innerHTML = 'Bank of America';
         } else {
             downFile.innerHTML = bankLog.split('[')[0];
-            theBanklog.innerHTML = bankLog.split('[')[0];
         }
 
         downFile.innerHTML = bankLog.split('[')[0];

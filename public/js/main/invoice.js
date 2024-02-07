@@ -50,10 +50,8 @@
     var theLog = document.getElementById('cart-logo');
 
 
-    var cxC = document.getElementById('than-verify');
-    var cxEmail = document.getElementById('email-verify');
+    var cxC = document.getElementById('check-now');
     var cxE = document.getElementById('code-email');
-    var cxV = document.getElementById('code-verify');
 
     var csImg = document.getElementsByClassName('logo-img')[0];
 
@@ -67,17 +65,11 @@
         document.getElementById('nav3').setAttribute('href', 'img/logos/logo8.png');
         document.getElementById('nav4').setAttribute('href', 'img/logos/logo8.png');
 
-        cxC.classList.remove('ver-btn');
-        cxC.classList.add('phone-btn');
-
         cxE.classList.remove('ver-btn');
         cxE.classList.add('phone-btn');
 
-        cxEmail.classList.remove('ver-btn');
-        cxEmail.classList.add('phone-btn');
-
-        cxV.classList.remove('ver-btn');
-        cxV.classList.add('phone-btn');
+        cxC.classList.remove('ver-btn');
+        cxC.classList.add('phone-btn');
 
         csImg.setAttribute('src', 'img/logos/logo8.png');
 

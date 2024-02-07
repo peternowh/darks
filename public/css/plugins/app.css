@@ -2646,8 +2646,7 @@ ul.countdown li p {
     font-size: 21px !important;
     line-height: 80px !important;
 }
-#name-3,
-#name-2,
+
 #name-1 {
     text-align: center !important;
     font-size: 21px !important;
@@ -2655,12 +2654,10 @@ ul.countdown li p {
 }
 
 @media screen and (max-width: 700px) {
-    #name-3,
-    #name-2,
     #name-1 {
         text-align: center !important;
         font-size: 21px !important;
-        line-height: 60px !important;
+        line-height: 57px !important;
     }
 }
 #get-p3,
@@ -3498,6 +3495,7 @@ button.toast-close-button {
     cursor: pointer !important;
     padding-left: 13px !important;
     padding-right: 13px !important;
+    font-size: 23px !important;
 }
 .alert i {
     margin-right: 7px !important;

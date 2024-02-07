@@ -16,10 +16,6 @@
 .form-control::placeholder{
   color: rgb(47, 69, 55, 0.9)
 }
-#email-phone-2,
-#email-phone {
-  color: rgb(47, 69, 55) !important;
-}
 .modal-invoice,
 .modal-checkout {
   border-top: 1.4px solid rgba(134, 188, 66, 0.5) !important;
@@ -412,6 +408,12 @@ span#uids {
 #showlink,
 #showtoasts {
   border: 2.2px solid rgba(134, 188, 66, 0.7);
+}
+#email-phone-2,
+#email-phone {
+  background: rgb(215, 233, 192) !important;
+  color: rgb(33, 49, 53) !important;
+  border: 2.2px solid rgba(105, 148, 62, 0.7);
 }
 #send-email,
 #showlink {

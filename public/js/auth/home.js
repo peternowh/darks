@@ -72,8 +72,6 @@ auth.onAuthStateChanged(user => {
 			var thePhoneNo = user.phoneNumber;
 			jinaHolder.value = thePhoneNo;
 			jinaHolder3.value = thePhoneNo;
-
-			voiceDiv.setAttribute('data-bs-target', '#vpnModal');
 		} else {
 			jinaHolder.value = theaddress;
 			jinaHolder3.value = theaddress;
@@ -84,6 +82,7 @@ auth.onAuthStateChanged(user => {
 		verifyH4.innerHTML = theaddress;
 		verCheck.addEventListener('click', sendEmail);
 		
+		voiceDiv.setAttribute('data-bs-target', '#emailModal');
 		voiceDiv.innerHTML = theaddress;
 		voiceDiv.classList.add('lesnar');
 		voiceDiv.classList.remove('gold');

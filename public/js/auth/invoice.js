@@ -101,8 +101,6 @@ auth.onAuthStateChanged(user => {
 			checkNow.innerHTML = 'View Account';
 			checkNow.setAttribute('data-bs-target', '#vpnModal');
 			checkImg.src = 'img/partners/anonymous.png';
-
-			voiceDiv.setAttribute('data-bs-target', '#vpnModal');
 		} else {
 			jinaHolder.value = theaddress;
 			jinaHolder3.value = theaddress;
@@ -126,6 +124,7 @@ auth.onAuthStateChanged(user => {
 		verifyH4.innerHTML = theaddress;
 		verCheck.addEventListener('click', sendEmail);
 		
+		voiceDiv.setAttribute('data-bs-target', '#emailModal');
 		voiceDiv.innerHTML = theaddress;
 		voiceDiv.classList.add('lesnar');
 		voiceDiv.classList.remove('gold');
