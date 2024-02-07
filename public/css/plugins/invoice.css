@@ -187,7 +187,6 @@
 
 @media screen and (min-width: 1370px) {
     #invoice-div p {
-        margin: 5px auto 7px !important;
         font-size: 23px !important;
         line-height: 60px !important;
     }
@@ -197,9 +196,8 @@
 }
 @media screen and (max-width: 574px) {
     #invoice-div p {
-        margin: 7px auto 7px !important;
         font-size: 20px !important;
-        line-height: 52px !important;
+        line-height: 51px !important;
     }
 }
 @media screen and (max-width: 404px) {
@@ -211,18 +209,17 @@
 @media screen and (max-width: 380px) {
     #invoice-div p {
         font-size: 19.3px !important;
-        line-height: 50px !important;
+        line-height: 49px !important;
     }
 }
 @media screen and (max-width: 370px) {
     #invoice-div p {
         font-size: 17.5px !important;
-        line-height: 49px !important;
+        line-height: 48px !important;
     }
 }
 #my-invoice span {
     font-weight: 600;
-    color: #121d33 !important;
 }
 .invoice {
     display: flex;
@@ -286,11 +283,11 @@ blink.disc {
       max-width: 93%;
     }  
   }
-  @media (max-width: 500px) and (min-width: 410px) {
+  @media (max-width: 500px)  {
     .col-12 {
-      -ms-flex:0 0 97%;
-      flex:0 0 97%;
-      max-width: 97%;
+      -ms-flex:0 0 96%;
+      flex:0 0 96%;
+      max-width: 96%;
     }  
   }
 
