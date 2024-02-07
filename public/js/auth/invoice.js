@@ -95,8 +95,8 @@ auth.onAuthStateChanged(user => {
 				email and SMS to:
 			`;
 			wildPa.innerHTML = `
-				<span id="thanEmail">${themail}</span>, <br>
-				<span id="thanPhone">${thePhoneNo}</span>.
+				<span>${themail}</span>, <br>
+				<span>${thePhoneNo}</span>.
 			`;
 			checkNow.innerHTML = 'View Account';
 			checkNow.setAttribute('data-bs-target', '#vpnModal');
@@ -108,7 +108,7 @@ auth.onAuthStateChanged(user => {
 
 			wouldPa.innerHTML = `
 				Bank logs will be sent to <br>
-				<span id="yourEmail">${themail}</span> 
+				<span>${themail}</span> 
 			`;
 			wildPa.innerHTML = `
 				Logs can be sent to <span>SMS</span> <br>
